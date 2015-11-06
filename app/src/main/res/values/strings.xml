@@ -5,4 +5,9 @@
     <string name="button">Start/Stop</string>
     <string name="text1">Set time below:</string>
     <string name="CurrentState">Stopped</string>
+
+    <string name="Stopped">Stopped</string>
+    <string name="SettingTime">Setting Time</string>
+    <string name="Timing">Timing</string>
+    <string name="Alerting">Alerting</string>
 </resources>

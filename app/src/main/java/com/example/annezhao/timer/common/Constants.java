@@ -7,8 +7,4 @@ public class Constants {
     private Constants(){} //no point of newing an object, private constructor
 
     final public static int SEC_PER_TICK = 1; //Seconds per tick.
-    final public static int MAX_SEC = 99; //The maximum seconds the timer could display.
-
-
-
 }
