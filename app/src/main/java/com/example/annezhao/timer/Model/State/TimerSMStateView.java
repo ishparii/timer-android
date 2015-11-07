@@ -12,6 +12,7 @@ public interface TimerSMStateView {
 
     //actions
     void actionInit();
+    void actionReset();
     void actionStart();
     void actionStop();
     void actionIncrease();

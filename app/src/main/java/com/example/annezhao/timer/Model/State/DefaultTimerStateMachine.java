@@ -17,7 +17,7 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
         this.clockModel = clockModel;
     }
 
-    //internal state of adaptor component, required for State pattern;
+    //internal state of adaptor component, required for the State pattern;
     private States state;
     private TimerUIUpdateListener uiUpdateListener; //updateTime(int timeValue), updateState(int stateId)
 
@@ -31,8 +31,9 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
         uiUpdateListener.updateState(state.getId());
     }
 
-    //forward event uiUpdateListener methods to the current state
-
+    // forward event uiUpdateListener methods to the current state
+    // these must be synchronized because events can come from the
+    // UI thread or the timer thread
     @Override
     public synchronized void onClick() {
         state.onClick();
@@ -78,31 +79,17 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
 
 
     //actions
-    @Override
-    public void actionInit() {
-        toStoppedState();
-        clockModel.stop();
-        timeModel.resetRuntime();
-    }
-
-    public void actionStart(){
+    @Override public void actionInit() { toStoppedState(); actionReset(); }
+    @Override public void actionReset() { timeModel.resetRuntime(); actionUpdateView(); }
+    @Override public void actionStart(){
         clockModel.start();
     }
+    @Override public void actionStop() { clockModel.stop(); /*timeModel.resetRuntime();*/ }
+    @Override public void actionIncrease(){ timeModel.incRuntime(); actionUpdateView(); }
 
-    @Override
-    public void actionStop() {
-        clockModel.stop();
-        timeModel.resetRuntime();
-    }
-
-    @Override
-    public void actionIncrease(){
-        timeModel.incRuntime();
-    }
-
-    @Override
-    public int actionTime(){
+    @Override public int actionTime(){
         timeModel.decRuntime();  //countdown
+        actionUpdateView();
         return timeModel.getRuntime();
     }
 

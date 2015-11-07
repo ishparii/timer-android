@@ -16,17 +16,16 @@ public class SettingTimeState implements States {
 
     @Override
     public void onClick() {
-        //todo how to implement 3 seonds guard
-        if(count<=3){
-            smStateView.actionIncrease();
-            count = 0;
-        }
+        smStateView.actionIncrease();
+        smStateView.toStoppedState();
+        //count = 0;
+        //if(count<=3){  }
     }
 
     @Override
     public void onTick() { //from the clock model, it's the background tick
         count ++;
-        if(count>3){
+        if(count==3){
             smStateView.toTimingState();
         }
     }

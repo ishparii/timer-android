@@ -25,14 +25,19 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
 
     private TimerModelFacade modelFacade;
 
-    public void SetModel(ConcreteTimerModelFacade modelFacade){
+    public void setModel(ConcreteTimerModelFacade modelFacade){
         this.modelFacade = modelFacade;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // inject dependency on view so this adapter receives UI events
         setContentView(R.layout.activity_main);
+        // inject dependency on model into this so model receives UI events
+        this.setModel(new ConcreteTimerModelFacade());
+        // inject dependency on this into model to register for UI updates
+        modelFacade.setUIUpdateListener(this);
     }
 
     @Override
@@ -84,7 +89,7 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
         });
     }
 
-    //forward listener events
+    // forward event listener methods to the model
     public void onClick(final View view){
         modelFacade.onClick();
     }
