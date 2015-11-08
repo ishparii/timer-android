@@ -14,6 +14,7 @@ public class SettingTimeState implements States {
                 this.smStateView = smStateView;
         }
 
+
     @Override
     public void onClick() {
         smStateView.actionIncrease();
@@ -27,6 +28,7 @@ public class SettingTimeState implements States {
         count ++;
         if(count==3){
             smStateView.toTimingState();
+            count = 0;
         }
     }
 

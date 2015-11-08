@@ -14,10 +14,12 @@ public class TimingState implements States {
         this.smStateView = smStateView;
     }
 
+
     @Override
     public void onClick() {
         smStateView.actionStop();
         smStateView.toStoppedState();
+        smStateView.actionReset();
     }
 
     @Override

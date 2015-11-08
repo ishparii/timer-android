@@ -18,6 +18,7 @@ public class AlertingState implements States {
     public void onClick() {
         smStateView.actionStop();
         smStateView.toStoppedState();
+        smStateView.actionReset();
     }
 
     @Override

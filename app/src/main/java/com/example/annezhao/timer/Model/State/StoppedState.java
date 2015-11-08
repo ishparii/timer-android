@@ -31,8 +31,8 @@ public class StoppedState implements States{
     @Override
     public void onClick() {
         smStateView.actionStart();
-        smStateView.actionIncrease();
         smStateView.toSettingTimeState();
+        smStateView.actionIncrease();
     }
 }
 
