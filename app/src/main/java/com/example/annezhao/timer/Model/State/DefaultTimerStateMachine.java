@@ -38,6 +38,7 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
     public synchronized void onClick() {
         state.onClick();
     }
+
     @Override
     public synchronized void onTick() {
         state.onTick();
@@ -79,13 +80,27 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
 
 
     //actions
-    @Override public void actionInit() { toStoppedState(); actionReset(); }
-    @Override public void actionReset() { timeModel.resetRuntime(); actionUpdateView(); }
+    @Override public void actionInit() {
+        toStoppedState(); actionReset();
+    }
+
+    @Override public void actionReset() {
+        timeModel.resetRuntime(); actionUpdateView();
+    }
+
     @Override public void actionStart(){
         clockModel.start();
     }
-    @Override public void actionStop() { clockModel.stop(); /*timeModel.resetRuntime();*/ }
-    @Override public void actionIncrease(){ timeModel.incRuntime(); actionUpdateView(); }
+
+
+    @Override public void actionStop() {
+        clockModel.stop();
+        /*timeModel.resetRuntime();*/
+    }
+
+    @Override public void actionIncrease(){
+        timeModel.incRuntime(); actionUpdateView();
+    }
 
     @Override public int actionTime(){
         timeModel.decRuntime();  //countdown
@@ -96,7 +111,6 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
     @Override
     public void actionAlert(){
         // TODO: 11/3/15 add alerting function
-
     }
 
     @Override
