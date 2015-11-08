@@ -81,11 +81,13 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
 
     //actions
     @Override public void actionInit() {
-        toStoppedState(); actionReset();
+        toStoppedState();
+        actionReset();
     }
 
     @Override public void actionReset() {
-        timeModel.resetRuntime(); actionUpdateView();
+        timeModel.resetRuntime();
+        actionUpdateView();
     }
 
     @Override public void actionStart(){
@@ -99,7 +101,8 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
     }
 
     @Override public void actionIncrease(){
-        timeModel.incRuntime(); actionUpdateView();
+        timeModel.incRuntime();
+        actionUpdateView();
     }
 
     @Override public int actionTime(){

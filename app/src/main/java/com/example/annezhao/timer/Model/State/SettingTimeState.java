@@ -17,8 +17,8 @@ public class SettingTimeState implements States {
     @Override
     public void onClick() {
         smStateView.actionIncrease();
-        smStateView.toStoppedState();
-        //count = 0;
+        //smStateView.toStoppedState();
+        count = 0;
         //if(count<=3){  }
     }
 

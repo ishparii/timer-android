@@ -16,20 +16,13 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b337c4e1-78eb-4ed3-b63b-ba79ff9abe91" name="Default" comment="Made changes to the Adapter">
+    <list default="true" id="b337c4e1-78eb-4ed3-b63b-ba79ff9abe91" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/DefaultTimerStateMachine.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/DefaultTimerStateMachine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/SettingTimeState.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/SettingTimeState.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="timer.iws" />
@@ -62,27 +55,34 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/DefaultTimerStateMachine.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2423#2424#0" expanded="true" />
-                <element signature="e#2457#2458#0" expanded="true" />
-                <element signature="e#2982#2983#0" expanded="true" />
-                <element signature="e#3016#3017#0" expanded="true" />
+                <element signature="e#2439#2440#0" expanded="true" />
+                <element signature="e#2473#2474#0" expanded="true" />
+                <element signature="e#3006#3007#0" expanded="true" />
+                <element signature="e#3040#3041#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimerAdapter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/android/TimerAdapter.java">
+      <file leaf-file-name="StoppedState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/StoppedState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60048425">
-              <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
-              <folding>
-                <element signature="e#3059#3060#0" expanded="true" />
-                <element signature="e#3096#3097#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingTimeState.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/SettingTimeState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6150121">
+              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1551,12 +1551,12 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/TimerSMStateView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/SettingTimeState.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/TimingState.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/AlertingState.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/DefaultTimerStateMachine.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/android/TimerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/DefaultTimerStateMachine.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/SettingTimeState.java" />
       </list>
     </option>
   </component>
@@ -2199,7 +2199,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446832782290</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed button, now reacts on click.">
+      <created>1446964567754</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1446964567754</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2279,7 +2285,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Made changes to the Adapter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made changes to the Adapter" />
+    <MESSAGE value="Fixed button, now reacts on click." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed button, now reacts on click." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2593,14 +2600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/SettingTimeState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40381557">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/TimerModelFacade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21462639">
@@ -2611,33 +2610,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/StoppedState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5447942">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/AlertingState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21791768">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/DefaultTimerStateMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2423#2424#0" expanded="true" />
-            <element signature="e#2457#2458#0" expanded="true" />
-            <element signature="e#2982#2983#0" expanded="true" />
-            <element signature="e#3016#3017#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2686,12 +2663,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/android/TimerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60048425">
+        <state vertical-scroll-proportion="1.7627119">
           <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
           <folding>
             <element signature="e#3059#3060#0" expanded="true" />
             <element signature="e#3096#3097#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/StoppedState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/DefaultTimerStateMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2439#2440#0" expanded="true" />
+            <element signature="e#2473#2474#0" expanded="true" />
+            <element signature="e#3006#3007#0" expanded="true" />
+            <element signature="e#3040#3041#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/SettingTimeState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6150121">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
