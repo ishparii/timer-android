@@ -105,10 +105,10 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
         actionUpdateView();
     }
 
-    @Override public int actionTime(){
+    @Override
+    public void actionCountDown(){
         timeModel.decRuntime();  //countdown
         actionUpdateView();
-        return timeModel.getRuntime();
     }
 
     @Override
@@ -119,6 +119,11 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
     @Override
     public void actionUpdateView(){
         state.updateView();
+    }
+
+    @Override
+    public int actionGetTime() {
+        return timeModel.getRuntime();
     }
 
 }
