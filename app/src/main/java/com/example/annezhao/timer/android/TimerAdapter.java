@@ -73,7 +73,7 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
             @Override
             public void run() {
                 final TextView displayTime = (TextView) findViewById(R.id.displayTime);
-                displayTime.setText(Integer.toString(timeValue));
+                displayTime.setText(Integer.toString(timeValue / 10) + Integer.toString(timeValue % 10));
             }
         });
     }
