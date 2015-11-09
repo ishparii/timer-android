@@ -114,6 +114,7 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
     @Override
     public void actionAlert(){
         // TODO: 11/3/15 add alerting function
+        uiUpdateListener.playAlarmSound();
     }
 
     @Override

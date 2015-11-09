@@ -6,4 +6,5 @@ package com.example.annezhao.timer.common;
 public interface TimerUIUpdateListener {
     void updateTime(int timeValue);
     void updateState(int stateID);
+    void playAlarmSound();
 }

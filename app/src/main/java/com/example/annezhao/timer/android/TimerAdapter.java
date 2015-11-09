@@ -94,14 +94,14 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
         modelFacade.onClick();
     }
 
-    public void PlayAlarmSound(){
+    public void playAlarmSound(){
         final Uri defaultRingtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         final MediaPlayer mediaPlayer = new MediaPlayer();
         final Context context = getApplicationContext();
 
         try{
             mediaPlayer.setDataSource(context,defaultRingtoneUri);
-            mediaPlayer.setAudioStreamType(AudioManager.STREAM_NOTIFICATION);
+            mediaPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
             mediaPlayer.prepare();
             mediaPlayer.start();
         } catch (IOException e) {
