@@ -21,6 +21,7 @@ public interface TimerSMStateView {
     void actionUpdateView();
     int actionGetTime();
     boolean inputEntered();
+    boolean inputValid();
     int actionGetInputTime();
     void actionSetTime();
 

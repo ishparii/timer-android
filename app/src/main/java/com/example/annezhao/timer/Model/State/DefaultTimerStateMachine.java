@@ -129,6 +129,8 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
     @Override
     public boolean inputEntered() { return uiUpdateListener.inputEntered(); }
 
+    @Override public boolean inputValid() { return uiUpdateListener.inputValid(); }
+
     @Override
     public int actionGetInputTime() {
         return uiUpdateListener.getInputRunTIme();

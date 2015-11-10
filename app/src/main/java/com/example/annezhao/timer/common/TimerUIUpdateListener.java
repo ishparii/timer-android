@@ -8,5 +8,6 @@ public interface TimerUIUpdateListener {
     void updateState(int stateID);
     void playAlarmSound();
     boolean inputEntered();
+    boolean inputValid();
     int getInputRunTIme();
 }

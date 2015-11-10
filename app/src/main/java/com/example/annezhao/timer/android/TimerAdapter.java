@@ -123,17 +123,33 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
     }
 
     @Override
-    public int getInputRunTIme() {
-        final EditText editText = (EditText)findViewById(R.id.inputTime);
-        String inputRunTimeString = editText.getText().toString();
-        int inputRunTimeInt = Integer.parseInt(inputRunTimeString);
+    public boolean inputValid(){
+        if (inputEntered()) {
+            final EditText editText = (EditText)findViewById(R.id.inputTime);
+            String input = editText.getText().toString();
+            int inputInt = Integer.parseInt(input);
 
-        if(inputRunTimeInt>0 && inputRunTimeInt<100){
+            if(inputInt>0 && inputInt<100){
+                return true;
+            } else {
+                //Toast.makeText(this, "Please enter a value between 1 and 99!", Toast.LENGTH_SHORT).show();
+                editText.setError("Please enter a value between 1 and 99!");
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public int getInputRunTIme() {
+        if (inputEntered() && inputValid()) {
+            final EditText editText = (EditText) findViewById(R.id.inputTime);
+            String inputRunTimeString = editText.getText().toString();
+            int inputRunTimeInt = Integer.parseInt(inputRunTimeString);
             return inputRunTimeInt;
         }
         else{
-            Toast.makeText(this, "Please enter a value between 1 and 99!", Toast.LENGTH_SHORT).show();
-            //editText.setError("Please enter a value between 1 and 99!");
             return 0;
         }
     }
