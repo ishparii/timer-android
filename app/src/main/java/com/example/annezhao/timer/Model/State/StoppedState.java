@@ -47,6 +47,9 @@ public class StoppedState implements States{
             smStateView.actionIncrease();*/
             smStateView.actionStop();
         }
+        else{
+            smStateView.actionStop();
+        }
     }
 }
 

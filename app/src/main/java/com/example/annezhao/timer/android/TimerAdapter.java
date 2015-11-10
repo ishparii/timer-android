@@ -153,4 +153,5 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
             return 0;
         }
     }
+
 }
