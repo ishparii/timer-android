@@ -91,6 +91,17 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
         });
     }
 
+    @Override
+    public void clearInput() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                final EditText input = (EditText) findViewById(R.id.inputTime);
+                input.setText("");
+            }
+        });
+    }
+
     // forward event listener methods to the model
     public void onClick(final View view){
         modelFacade.onClick();

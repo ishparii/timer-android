@@ -49,6 +49,9 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
         uiUpdateListener.updateTime(timeModel.getRuntime());
     }
 
+    @Override
+    public void clearUIInput() { uiUpdateListener.clearInput(); }
+
     //known states
     private final States STOPPED = new StoppedState(this);
     private final States INCREASING = new SettingTimeState(this);
