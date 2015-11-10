@@ -27,6 +27,7 @@ public class SettingTimeState implements States {
     public void onTick() { //from the clock model, it's the background tick
         count ++;
         if(count==3){
+            smStateView.actionAlert();
             smStateView.toTimingState();
             count = 0;
         }
