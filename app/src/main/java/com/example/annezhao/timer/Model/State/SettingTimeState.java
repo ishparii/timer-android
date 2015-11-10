@@ -20,9 +20,7 @@ public class SettingTimeState implements States {
         if (smStateView.actionGetTime() < 99) {
             smStateView.actionIncrease();
         }
-        //smStateView.toStoppedState();
-        count = 0;
-        //if(count<=3){  }
+        count = 0; //reset count
     }
 
     @Override

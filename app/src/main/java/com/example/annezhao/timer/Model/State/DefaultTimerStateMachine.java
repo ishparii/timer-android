@@ -113,7 +113,6 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
 
     @Override
     public void actionAlert(){
-        // TODO: 11/3/15 add alerting function
         uiUpdateListener.playAlarmSound();
     }
 
@@ -125,6 +124,18 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
     @Override
     public int actionGetTime() {
         return timeModel.getRuntime();
+    }
+
+    @Override
+    public int actionGetInputTime() {
+        return uiUpdateListener.getInputRunTIme();
+    }
+
+    @Override
+    public void actionSetTime() {
+        int time = actionGetInputTime();
+        timeModel.setRuntime(time);
+        actionUpdateView();
     }
 
 }

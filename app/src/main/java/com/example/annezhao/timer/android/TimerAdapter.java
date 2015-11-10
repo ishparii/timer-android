@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.annezhao.timer.ConcreteTimerModelFacade;
@@ -83,7 +84,7 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                final TextView currentState = (TextView)findViewById(R.id.CurrentState);
+                final TextView currentState = (TextView) findViewById(R.id.CurrentState);
                 currentState.setText(getString(stateID));
             }
         });
@@ -108,4 +109,21 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
             e.printStackTrace();
         }
     }
+
+    @Override
+    public int getInputRunTIme() {
+        final EditText editText = (EditText)findViewById(R.id.inputTime);
+        String inputRunTimeString = editText.getText().toString();
+        final int inputRunTimeInt = Integer.parseInt(inputRunTimeString);
+
+        if(inputRunTimeInt>0 && inputRunTimeInt<100){
+            return inputRunTimeInt;
+        }
+        else{
+            editText.setError("Please enter a value between 1 and 99!");
+            return 0;
+        }
+    }
+
+
 }

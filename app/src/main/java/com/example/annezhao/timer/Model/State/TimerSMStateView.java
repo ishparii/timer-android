@@ -20,6 +20,8 @@ public interface TimerSMStateView {
     void actionAlert();
     void actionUpdateView();
     int actionGetTime();
+    int actionGetInputTime();
+    void actionSetTime();
 
 
     //state-dependent UI updates

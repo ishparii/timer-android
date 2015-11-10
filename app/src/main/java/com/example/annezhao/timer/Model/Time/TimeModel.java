@@ -6,6 +6,7 @@ package com.example.annezhao.timer.Model.Time;
 public interface TimeModel {
     void resetRuntime();
     int getRuntime();
+    void setRuntime(int inputRunTime);
     void incRuntime();
     void decRuntime();
 }
