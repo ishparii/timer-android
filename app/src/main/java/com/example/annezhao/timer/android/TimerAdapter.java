@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.annezhao.timer.ConcreteTimerModelFacade;
 import com.example.annezhao.timer.Model.Time.TimeModel;
@@ -111,16 +112,28 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
     }
 
     @Override
+    public boolean inputEntered() {
+        final EditText editText = (EditText)findViewById(R.id.inputTime);
+        String input = editText.getText().toString();
+        if (input.length() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
     public int getInputRunTIme() {
         final EditText editText = (EditText)findViewById(R.id.inputTime);
         String inputRunTimeString = editText.getText().toString();
-        final int inputRunTimeInt = Integer.parseInt(inputRunTimeString);
+        int inputRunTimeInt = Integer.parseInt(inputRunTimeString);
 
         if(inputRunTimeInt>0 && inputRunTimeInt<100){
             return inputRunTimeInt;
         }
         else{
-            editText.setError("Please enter a value between 1 and 99!");
+            Toast.makeText(this, "Please enter a value between 1 and 99!", Toast.LENGTH_SHORT).show();
+            //editText.setError("Please enter a value between 1 and 99!");
             return 0;
         }
     }

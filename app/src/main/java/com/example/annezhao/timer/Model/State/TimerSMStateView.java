@@ -20,6 +20,7 @@ public interface TimerSMStateView {
     void actionAlert();
     void actionUpdateView();
     int actionGetTime();
+    boolean inputEntered();
     int actionGetInputTime();
     void actionSetTime();
 

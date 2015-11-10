@@ -31,7 +31,11 @@ public class StoppedState implements States{
     @Override
     public void onClick() {
         smStateView.actionStart();
-        if(smStateView.actionGetInputTime() != 0){  //if there is a valid input
+        /*if(smStateView.actionGetInputTime() != 0){  //if there is a valid input
+            smStateView.actionSetTime();
+            smStateView.toTimingState();
+        }*/
+        if (smStateView.inputEntered()) {
             smStateView.actionSetTime();
             smStateView.toTimingState();
         }
