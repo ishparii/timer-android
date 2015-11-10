@@ -42,6 +42,10 @@ public class StoppedState implements States{
         else if (smStateView.inputEntered() && smStateView.inputValid()) {
             smStateView.actionSetTime();
             smStateView.toTimingState();
+        } else {
+            /*smStateView.toSettingTimeState();
+            smStateView.actionIncrease();*/
+            smStateView.actionStop();
         }
     }
 }
