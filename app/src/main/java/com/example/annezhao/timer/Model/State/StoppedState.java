@@ -16,7 +16,7 @@ public class StoppedState implements States{
     @Override
     public void updateView() {
         smStateView.updateUIRuntime();
-        smStateView.clearUIInput();
+        smStateView.clearInput();
     }
 
     @Override
@@ -41,13 +41,12 @@ public class StoppedState implements States{
             smStateView.actionIncrease();
         }
         else if (smStateView.inputEntered() && smStateView.inputValid()) {
-            smStateView.actionAlert();
             smStateView.actionSetTime();
             smStateView.actionUpdateView();
             smStateView.actionAlert();
             smStateView.toTimingState();
         }
-        else {
+        else{
             smStateView.actionStop();
         }
     }
