@@ -44,6 +44,7 @@ public class StoppedState implements States{
             smStateView.actionAlert();
             smStateView.actionSetTime();
             smStateView.actionUpdateView();
+            smStateView.actionAlert();
             smStateView.toTimingState();
         }
         else {

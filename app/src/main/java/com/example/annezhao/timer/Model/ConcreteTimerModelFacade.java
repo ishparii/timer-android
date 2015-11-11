@@ -1,4 +1,4 @@
-package com.example.annezhao.timer;
+package com.example.annezhao.timer.Model;
 
 import com.example.annezhao.timer.Model.Clock.ClockModel;
 import com.example.annezhao.timer.Model.Clock.DefaultClockModel;
@@ -11,7 +11,7 @@ import com.example.annezhao.timer.common.TimerUIUpdateListener;
 /**
  * Created by annezhao on 11/4/15.
  */
-public class ConcreteTimerModelFacade implements TimerModelFacade{
+public class ConcreteTimerModelFacade implements TimerModelFacade {
 
     private TimerStateMachine timerStateMachine;
     private TimeModel timeModel;
