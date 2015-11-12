@@ -1,7 +1,7 @@
 package com.example.annezhao.timer.test.model.Clock;
 
 
-import static org.junit.Assert.AssertEquals;
+import static org.junit.Assert.assertEquals;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -53,4 +53,5 @@ public abstract class AbstractClockModelTest {
         model.stop();
         assertEquals(6, j.get());
     }
+
 }
