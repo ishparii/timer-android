@@ -56,4 +56,6 @@ public abstract class AbstractClockModelTest {
         assertEquals(6, j.get());
     }
 
+
+
 }
