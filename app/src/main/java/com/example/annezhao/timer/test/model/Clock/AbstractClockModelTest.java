@@ -27,18 +27,20 @@ public abstract class AbstractClockModelTest {
     //verifies that a stopped clock model does not emit any tick event.
 
     @Test
-    public void teststopped() throws InterruptedException{
+    public void testStopped() throws InterruptedException{
         //timer and clock has different thread
+        //it is a thread-safe object
 
         final AtomicInteger i = new AtomicInteger(0);
         model.setOnTickListener(new OnTickListener() {
             @Override
             public void onTick(){i.incrementAndGet();}
         });
-        model.start();
-        Thread.sleep(6500);
+        Thread.sleep(6500); //another thread
         assertEquals(0, i.get());}
 
+    //verifies that in the clockmode, if the clock is running, tick event
+    //takes place very 1 second
     @Test
     public void testRunning() throws InterruptedException{
         final AtomicInteger j = new AtomicInteger(0);
