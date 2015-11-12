@@ -17,10 +17,13 @@ public class SettingTimeState implements States {
 
     @Override
     public void onClick() {
+        count = 0;
         if (smStateView.actionGetTime() < 99) {
             smStateView.actionIncrease();
+        }else{
+            smStateView.actionAlert();
+            smStateView.toTimingState();
         }
-        count = 0; //reset count
     }
 
     @Override

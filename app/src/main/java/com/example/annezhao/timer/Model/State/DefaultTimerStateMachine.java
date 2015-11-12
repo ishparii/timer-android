@@ -50,7 +50,10 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
     }
 
     @Override
-    public void clearUIInput() { uiUpdateListener.clearInput(); }
+    public void clearInput() {
+        uiUpdateListener.clearInput();
+    }
+
 
     //known states
     private final States STOPPED = new StoppedState(this);

@@ -1,4 +1,4 @@
-package com.example.annezhao.timer;
+package com.example.annezhao.timer.Model;
 
 import com.example.annezhao.timer.common.TimerUIListener;
 import com.example.annezhao.timer.common.TimerUIUpdateListener;

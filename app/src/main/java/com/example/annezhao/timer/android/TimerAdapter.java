@@ -6,7 +6,6 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,10 +14,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.annezhao.timer.ConcreteTimerModelFacade;
-import com.example.annezhao.timer.Model.Time.TimeModel;
+import com.example.annezhao.timer.Model.ConcreteTimerModelFacade;
 import com.example.annezhao.timer.R;
-import com.example.annezhao.timer.TimerModelFacade;
+import com.example.annezhao.timer.Model.TimerModelFacade;
 import com.example.annezhao.timer.common.TimerUIUpdateListener;
 
 import java.io.IOException;
@@ -155,7 +153,7 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
     @Override
     public int getInputRunTIme() {
         if (inputEntered() && inputValid()) {
-            final EditText editText = (EditText) findViewById(R.id.inputTime);
+            final EditText editText = (EditText)findViewById(R.id.inputTime);
             String inputRunTimeString = editText.getText().toString();
             int inputRunTimeInt = Integer.parseInt(inputRunTimeString);
             return inputRunTimeInt;
@@ -163,6 +161,7 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
         else{
             return 0;
         }
+
     }
 
 }
