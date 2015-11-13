@@ -14,6 +14,7 @@ import dalvik.annotation.TestTargetClass;
 
 /**
  * Created by HongbinSun on 11/12/15.
+ * //it is abstract because it can not be instantiated
  */
 public abstract class AbstractClockModelTest {
 

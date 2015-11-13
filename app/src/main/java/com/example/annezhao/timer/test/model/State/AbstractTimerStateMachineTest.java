@@ -56,17 +56,40 @@ public abstract class AbstractTimerStateMachineTest {
         assertEquals(R.string.Stopped, dependency.getState());
     }
 
-    //verifies the following scenarios: time is 0, press start/click 15 times, wait 2s,
+    //verifies the following scenarios: time is 0, press start/stop 15 times,
     //expect time 15.
 
     @Test
-    public void testscenarioSet() {
+    public void testScenarioSet() {
         assertTimeEquals(0);
         //directly invoke the button press event handler methods
         onClickRepeat(15);
-        onTickRepeat(2);
         assertTimeEquals(15);
     }
+
+    //verifies the following scenario:time is 0, press start/stop 17 times, wait 2s,
+    //expect time 17, wait 3s, expect time 15, wait 5s, expect 10. press start/stop, expect 0
+
+    @Test
+    public void testScenarioRun(){
+        assertTimeEquals(0);
+        //directly invoke the button press event handler methods
+        onClickRepeat(17);
+        assertEquals(R.string.SettingTime, dependency.getState());
+        assertTrue(dependency.isStarted());
+        onTickRepeat(2);
+        assertTimeEquals(17);
+        assertEquals(R.string.SettingTime, dependency.getState());
+        assertTrue(dependency.isStarted());
+        onTickRepeat(3);
+        assertTimeEquals(15);
+        assertEquals(R.string.Timing, dependency.getState());
+        onTickRepeat(15);
+        assertTimeEquals(0);
+        assertEquals(R.string.Alerting, dependency.getState());
+    }
+
+
 
     //checks whether the model has invoked the expected time-keeping
     //methods on the mock object
@@ -74,7 +97,7 @@ public abstract class AbstractTimerStateMachineTest {
 
     protected void onClickRepeat (final int n){for (int i=0; i<n; i++){model.onClick();}}
 
-    protected void onTickRepeat (final int j){for (int i=0; i<j; i++);{model.onTick();}}
+    protected void onTickRepeat (final int j){for (int i=0; i<j; i++){model.onTick();}}
 
     protected void assertTimeEquals(final int t){assertEquals(t, dependency.getTime());}
 }
@@ -104,7 +127,7 @@ public abstract class AbstractTimerStateMachineTest {
         }
 
         @Override
-        public void playAlarmSound() {
+        public void playAlarmSound() {//// TODO: 11/13/15 how to test playSound
 
         }
 
@@ -124,7 +147,7 @@ public abstract class AbstractTimerStateMachineTest {
         }
 
         @Override
-        public void clearInput() {
+        public void clearInput() {runningTime=0;
 
         }
 
