@@ -68,7 +68,8 @@ public abstract class AbstractTimerStateMachineTest {
     }
 
     //verifies the following scenario:time is 0, press start/stop 17 times, wait 2s,
-    //expect time 17, wait 3s, expect time 15, wait 5s, expect 10. press start/stop, expect 0
+    //expect time 17, wait 3s, expect time 15, wait 2s, expect 13. wait 13s, expect 0.
+    // press start/stop, expect dependency stopped. 
 
     @Test
     public void testScenarioRun(){
@@ -84,9 +85,17 @@ public abstract class AbstractTimerStateMachineTest {
         onTickRepeat(3);
         assertTimeEquals(15);
         assertEquals(R.string.Timing, dependency.getState());
-        onTickRepeat(15);
+        assertTrue(dependency.isStarted());
+        onTickRepeat(2);
+        assertTimeEquals(13);
+        assertEquals(R.string.Timing, dependency.getState());
+        assertTrue(dependency.isStarted());
+        onTickRepeat(13);
         assertTimeEquals(0);
         assertEquals(R.string.Alerting, dependency.getState());
+        assertTrue(dependency.isStarted());
+        model.onClick();
+        assertFalse(dependency.isStarted());
     }
 
 
