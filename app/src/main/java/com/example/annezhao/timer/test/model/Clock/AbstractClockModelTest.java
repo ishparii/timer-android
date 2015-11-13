@@ -1,16 +1,14 @@
 package com.example.annezhao.timer.test.model.Clock;
 
 
-import static org.junit.Assert.assertEquals;
-
-import java.util.concurrent.atomic.AtomicInteger;
-
-import org.junit.Test;
-
 import com.example.annezhao.timer.Model.Clock.ClockModel;
 import com.example.annezhao.timer.Model.Clock.OnTickListener;
 
-import dalvik.annotation.TestTargetClass;
+import org.junit.Test;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by HongbinSun on 11/12/15.
@@ -56,7 +54,5 @@ public abstract class AbstractClockModelTest {
         model.stop();
         assertEquals(6, j.get());
     }
-
-
 
 }

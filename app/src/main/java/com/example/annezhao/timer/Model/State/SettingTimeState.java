@@ -20,9 +20,6 @@ public class SettingTimeState implements States {
         count = 0;
         if (smStateView.actionGetTime() < 99) {
             smStateView.actionIncrease();
-        }else{
-            smStateView.actionAlert();
-            smStateView.toTimingState();
         }
     }
 
@@ -33,6 +30,10 @@ public class SettingTimeState implements States {
             smStateView.actionAlert();
             smStateView.toTimingState();
             count = 0;
+        }
+        if(smStateView.actionGetTime() == 99) {
+            smStateView.actionAlert();
+            smStateView.toTimingState();
         }
     }
 

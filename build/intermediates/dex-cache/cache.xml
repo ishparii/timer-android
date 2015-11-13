@@ -2,32 +2,46 @@
 <items version="2" >
 
     <item
-        jar="/Users/HongbinSun/hello-world/timer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jar="C:\Users\Ilona\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-core\1.3\42a25dc3219429f0e5d060061f71acb49bf010a0\hamcrest-core-1.3.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="42a25dc3219429f0e5d060061f71acb49bf010a0">
+        <dex dex="C:\dev\java_comp413\timer\app\build\intermediates\pre-dexed\debug\hamcrest-core-1.3-15e4afe07ed3a0b899dd27ac8b10475cdb7fefcd.jar" />
+    </item>
+    <item
+        jar="C:\dev\java_comp413\timer\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="/Users/HongbinSun/hello-world/timer/app/build/intermediates/pre-dexed/debug/classes-0ca7072c5504fe689d3faf2db82cb82382a849d6.jar" />
+        <dex dex="C:\dev\java_comp413\timer\app\build\intermediates\pre-dexed\debug\classes-650ddbafb81835e59cbc31eee1b3cbd819c1d21b.jar" />
     </item>
     <item
-        jar="/Users/HongbinSun/hello-world/timer/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jar="C:\Users\Ilona\.gradle\caches\modules-2\files-2.1\junit\junit\4.12\2973d150c0dc1fefe998f834810d68f278ea58ec\junit-4.12.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="/Users/HongbinSun/hello-world/timer/app/build/intermediates/pre-dexed/debug/classes-d5f55da0ccaa1834d627ee9186095cee70a808f3.jar" />
+        sha1="2973d150c0dc1fefe998f834810d68f278ea58ec">
+        <dex dex="C:\dev\java_comp413\timer\app\build\intermediates\pre-dexed\debug\junit-4.12-3ea1ca11b72cb13cff2c53ac5acc554035567aaa.jar" />
     </item>
     <item
-        jar="/Users/HongbinSun/hello-world/timer/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="/Users/HongbinSun/hello-world/timer/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-15fbdfcf5adde39db3744c47b4fb5856eb1d9fa4.jar" />
-    </item>
-    <item
-        jar="/Users/HongbinSun/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jar="C:\Users\Ilona\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="/Users/HongbinSun/hello-world/timer/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-5177b840104268e81e4484848883e75b5a7b100e.jar" />
+        <dex dex="C:\dev\java_comp413\timer\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-4d56967fde682418dba506b615fce386fa53c6f6.jar" />
+    </item>
+    <item
+        jar="C:\dev\java_comp413\timer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\dev\java_comp413\timer\app\build\intermediates\pre-dexed\debug\classes-fa1a0f2380c90d55f68eb4fe7ac4d239ce697d8b.jar" />
+    </item>
+    <item
+        jar="C:\dev\java_comp413\timer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\dev\java_comp413\timer\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-78f783158123da211bb8eacfc94a51e5ca7cd130.jar" />
     </item>
 
 </items>
