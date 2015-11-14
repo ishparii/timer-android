@@ -48,4 +48,5 @@ public class SettingTimeState implements States {
     public int getId() {
         return R.string.SettingTime;
     }
+
 }

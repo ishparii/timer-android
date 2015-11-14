@@ -37,5 +37,6 @@ public class TimingState implements States {
     public int getId() {
         return R.string.Timing;
     }
+
 }
 

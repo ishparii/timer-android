@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,8 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.annezhao.timer.Model.ConcreteTimerModelFacade;
-import com.example.annezhao.timer.R;
 import com.example.annezhao.timer.Model.TimerModelFacade;
+import com.example.annezhao.timer.R;
 import com.example.annezhao.timer.common.TimerUIUpdateListener;
 
 import java.io.IOException;
@@ -24,6 +25,7 @@ import java.io.IOException;
 public class TimerAdapter extends Activity implements TimerUIUpdateListener{
 
     private TimerModelFacade modelFacade;
+    private static String TAG = "timeradapter-android-activity";
 
     public void setModel(ConcreteTimerModelFacade modelFacade){
         this.modelFacade = modelFacade;
@@ -31,11 +33,14 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(TAG, "onCreate");
         super.onCreate(savedInstanceState);
         // inject dependency on view so this adapter receives UI events
         setContentView(R.layout.activity_main);
-        // inject dependency on model into this so model receives UI events
-        this.setModel(new ConcreteTimerModelFacade());
+        if (savedInstanceState == null) {
+            // inject dependency on model into this so model receives UI events
+            this.setModel(new ConcreteTimerModelFacade());
+        }
         // inject dependency on this into model to register for UI updates
         modelFacade.setUIUpdateListener(this);
     }
@@ -63,8 +68,31 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
 
     @Override
     protected void onStart(){
+        Log.i(TAG, "onStart");
         super.onStart();
         modelFacade.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.i(TAG, "onStop");
+        super.onStop();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable("obj", modelFacade);
+        /*final TextView displayTime = (TextView) findViewById(R.id.displayTime);
+        final TextView currentState = (TextView) findViewById(R.id.CurrentState);
+        outState.putInt("timeDisplayed", Integer.parseInt(displayTime.getText().toString()));
+        outState.putString("currentState", currentState.getText().toString());*/
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        modelFacade=savedInstanceState.getParcelable("obj");
     }
 
     @Override

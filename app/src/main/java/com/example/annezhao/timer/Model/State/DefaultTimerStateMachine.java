@@ -26,9 +26,20 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
         this.uiUpdateListener = uiUpdateListener;
     }
 
-    protected void setState(final States state){
+    @Override
+    public void setState(final States state){
         this.state = state;
         uiUpdateListener.updateState(state.getId());
+    }
+
+    @Override
+    public States getState() {
+        return state;
+    }
+
+    @Override
+    public int getStatesId() {
+        return state.getId();
     }
 
     // forward event uiUpdateListener methods to the current state

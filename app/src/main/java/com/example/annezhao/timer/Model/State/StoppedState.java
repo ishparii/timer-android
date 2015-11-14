@@ -47,6 +47,7 @@ public class StoppedState implements States{
             smStateView.actionStop();
         }
     }
+
 }
 
 
