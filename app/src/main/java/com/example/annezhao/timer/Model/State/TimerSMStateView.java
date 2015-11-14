@@ -20,17 +20,14 @@ public interface TimerSMStateView {
     void actionAlert();
     void actionUpdateView();
     int actionGetTime();
-    boolean inputEntered();
-    boolean inputValid();
     int actionGetInputTime();
     void actionSetTime();
 
     //state-dependent UI updates
     void updateUIRuntime();
     void clearInput();
-
-    States getState();
-    void setState(States state);
+    boolean inputEntered();
+    boolean inputValid();
     int getStatesId();
 }
 

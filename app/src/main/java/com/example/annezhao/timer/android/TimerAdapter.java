@@ -43,10 +43,7 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
             // inject dependency on this into model to register for UI updates
             modelFacade.setUIUpdateListener(this);
             modelFacade.onStart();
-        } else {
-            //onRestoreModel(savedInstanceState);
         }
-
     }
 
     @Override
@@ -70,11 +67,11 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
         return super.onOptionsItemSelected(item);
     }
 
+    //for debugging purposes
     @Override
     protected void onStart() {
         Log.i(TAG, "onStart");
         super.onStart();
-        //modelFacade.onStart();
     }
 
     @Override
@@ -114,14 +111,6 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
         displayTime.setText(savedInstanceState.getString("timeDisplayed"));
         currentState.setText(savedInstanceState.getString("currentState"));
         input.setText(savedInstanceState.getString("currentInput"));
-        //modelFacade.onStart();
-    }
-
-    protected void onRestoreModel(Bundle savedInstanceState) {
-        Log.i(TAG, "onRestoreModel");
-        super.onRestoreInstanceState(savedInstanceState);
-        modelFacade=savedInstanceState.getParcelable("obj");
-        modelFacade.setUIUpdateListener(this);
     }
 
     @Override
@@ -217,7 +206,8 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
         else{
             return 0;
         }
-
     }
+
+
 
 }

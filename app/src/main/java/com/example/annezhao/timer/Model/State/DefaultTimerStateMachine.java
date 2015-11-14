@@ -26,15 +26,9 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
         this.uiUpdateListener = uiUpdateListener;
     }
 
-    @Override
-    public void setState(final States state){
+    protected void setState(final States state){
         this.state = state;
         uiUpdateListener.updateState(state.getId());
-    }
-
-    @Override
-    public States getState() {
-        return state;
     }
 
     @Override
@@ -64,7 +58,6 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
     public void clearInput() {
         uiUpdateListener.clearInput();
     }
-
 
     //known states
     private final States STOPPED = new StoppedState(this);

@@ -53,7 +53,6 @@ public class ConcreteTimerModelFacade implements TimerModelFacade {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(timeModel.getRuntime());
         dest.writeInt(timerStateMachine.getStatesId());
-        //dest.writeParcelable(timerStateMachine.getState(), 0);
     }
 
     public static final Parcelable.Creator<ConcreteTimerModelFacade> CREATOR
@@ -73,8 +72,6 @@ public class ConcreteTimerModelFacade implements TimerModelFacade {
         timerStateMachine = new DefaultTimerStateMachine(timeModel,clockModel);
         clockModel.setOnTickListener(timerStateMachine);
         readFromParcel(in);
-        //timeModel.setRuntime(in.readInt());
-        //timerStateMachine.setState((States) in.readParcelable(States.class.getClassLoader()));
         timerStateMachine.actionUpdateView();
         timerStateMachine.updateUIRuntime();
     }
