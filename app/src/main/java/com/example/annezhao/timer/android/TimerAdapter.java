@@ -40,9 +40,13 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
         if (savedInstanceState == null) {
             // inject dependency on model into this so model receives UI events
             this.setModel(new ConcreteTimerModelFacade());
+            // inject dependency on this into model to register for UI updates
+            modelFacade.setUIUpdateListener(this);
+            modelFacade.onStart();
+        } else {
+            //onRestoreModel(savedInstanceState);
         }
-        // inject dependency on this into model to register for UI updates
-        modelFacade.setUIUpdateListener(this);
+
     }
 
     @Override
@@ -67,10 +71,10 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
     }
 
     @Override
-    protected void onStart(){
+    protected void onStart() {
         Log.i(TAG, "onStart");
         super.onStart();
-        modelFacade.onStart();
+        //modelFacade.onStart();
     }
 
     @Override
@@ -80,7 +84,14 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
     }
 
     @Override
+    protected void onDestroy() {
+        Log.i(TAG, "onDestroy");
+        super.onDestroy();
+    }
+
+    @Override
     public void onSaveInstanceState(Bundle outState) {
+        Log.i(TAG, "onSaveInstanceState");
         super.onSaveInstanceState(outState);
         outState.putParcelable("obj", modelFacade);
         /*final TextView displayTime = (TextView) findViewById(R.id.displayTime);
@@ -91,8 +102,18 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        Log.i(TAG, "onRestoreInstanceState");
         super.onRestoreInstanceState(savedInstanceState);
         modelFacade=savedInstanceState.getParcelable("obj");
+        modelFacade.setUIUpdateListener(this);
+        //modelFacade.onStart();
+    }
+
+    protected void onRestoreModel(Bundle savedInstanceState) {
+        Log.i(TAG, "onRestoreModel");
+        super.onRestoreInstanceState(savedInstanceState);
+        modelFacade=savedInstanceState.getParcelable("obj");
+        modelFacade.setUIUpdateListener(this);
     }
 
     @Override
