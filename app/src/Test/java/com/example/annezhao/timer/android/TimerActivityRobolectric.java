@@ -1,6 +1,5 @@
 package com.example.annezhao.timer.android;
 
-import com.example.annezhao.timer.android.TimerAdapter;
 import com.example.annezhao.timer.test.android.AbstractTimerActivityTest;
 
 import org.junit.Before;

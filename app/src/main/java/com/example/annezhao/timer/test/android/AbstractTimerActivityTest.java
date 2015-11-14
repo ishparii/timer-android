@@ -55,7 +55,7 @@ public abstract class AbstractTimerActivityTest {
                 }
             }
         });
-        Thread.sleep(300);
+        Thread.sleep(3000);
         runUiThreadTasks();
         getActivity().runOnUiThread(new Runnable() {
             @Override
@@ -63,12 +63,12 @@ public abstract class AbstractTimerActivityTest {
                 assertEquals(10, getDisplayedValue());
             }
         });
-        Thread.sleep(400);
+        Thread.sleep(4000);
         runUiThreadTasks();
         getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                assertEquals(6,getDisplayedValue());
+                assertEquals(7,getDisplayedValue());
             }
         });
     }
