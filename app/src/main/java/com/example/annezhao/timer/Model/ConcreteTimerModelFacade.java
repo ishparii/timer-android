@@ -75,6 +75,8 @@ public class ConcreteTimerModelFacade implements TimerModelFacade {
         readFromParcel(in);
         //timeModel.setRuntime(in.readInt());
         //timerStateMachine.setState((States) in.readParcelable(States.class.getClassLoader()));
+        timerStateMachine.actionUpdateView();
+        timerStateMachine.updateUIRuntime();
     }
 
     private void readFromParcel(Parcel in) {
@@ -92,5 +94,6 @@ public class ConcreteTimerModelFacade implements TimerModelFacade {
             default:
                 break;
         }
+
     }
 }

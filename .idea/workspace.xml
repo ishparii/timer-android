@@ -33,6 +33,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/ConcreteTimerModelFacade.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/ConcreteTimerModelFacade.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/android/TimerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/android/TimerAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -65,8 +66,8 @@
       <file leaf-file-name="ConcreteTimerModelFacade.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/ConcreteTimerModelFacade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-37.0">
-              <caret line="92" column="22" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
+            <state vertical-scroll-proportion="-13.592592">
+              <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,20 +78,20 @@
       <file leaf-file-name="TimerAdapter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/android/TimerAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4944238">
-              <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.6082677">
+              <caret line="110" column="55" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#967#968#0" expanded="true" />
                 <element signature="e#1013#1014#0" expanded="true" />
-                <element signature="e#4054#4342#0" expanded="true" />
-                <element signature="e#4341#4342#0" expanded="true" />
-                <element signature="e#4437#4679#0" expanded="true" />
-                <element signature="e#4678#4679#0" expanded="true" />
-                <element signature="e#4756#4965#0" expanded="true" />
-                <element signature="e#4964#4965#0" expanded="true" />
-                <element signature="e#5066#5067#0" expanded="true" />
-                <element signature="e#5103#5104#0" expanded="true" />
+                <element signature="e#4634#4922#0" expanded="true" />
+                <element signature="e#4921#4922#0" expanded="true" />
+                <element signature="e#5017#5259#0" expanded="true" />
+                <element signature="e#5258#5259#0" expanded="true" />
+                <element signature="e#5336#5545#0" expanded="true" />
+                <element signature="e#5544#5545#0" expanded="true" />
+                <element signature="e#5646#5647#0" expanded="true" />
+                <element signature="e#5683#5684#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,7 +110,7 @@
       <file leaf-file-name="DefaultTimerStateMachine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/DefaultTimerStateMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.3333335">
+            <state vertical-scroll-proportion="-37.37037">
               <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
               <folding>
                 <element signature="e#1223#1224#0" expanded="true" />
@@ -1590,12 +1591,12 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/TimerSMStateView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/DefaultTimerStateMachine.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/ConcreteTimerModelFacade.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/States.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/StoppedState.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/TimingState.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/AlertingState.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/SettingTimeState.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/ConcreteTimerModelFacade.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/android/TimerAdapter.java" />
       </list>
     </option>
@@ -2473,7 +2474,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447522675402</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="rotation crash fixed; doesn't update the State name on the View">
+      <created>1447528441798</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1447528441798</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2485,21 +2492,21 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5053272" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4489796" sideWeight="0.5181543" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.042517006" sideWeight="0.5121029" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4387755" sideWeight="0.47276855" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4387755" sideWeight="0.4697428" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.042517006" sideWeight="0.49092284" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.042517006" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50340134" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24886535" sideWeight="0.49467275" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4489796" sideWeight="0.48184568" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4489796" sideWeight="0.48184568" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2554,7 +2561,8 @@
     <MESSAGE value="fixed &quot;Could not find any resource from reference ResName&quot; error" />
     <MESSAGE value="All test passed." />
     <MESSAGE value="code for rotation: crashes when screen is rotated" />
-    <option name="LAST_COMMIT_MESSAGE" value="code for rotation: crashes when screen is rotated" />
+    <MESSAGE value="rotation crash fixed; doesn't update the State name on the View" />
+    <option name="LAST_COMMIT_MESSAGE" value="rotation crash fixed; doesn't update the State name on the View" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2650,14 +2658,14 @@
             <element signature="imports" expanded="true" />
             <element signature="e#967#968#0" expanded="true" />
             <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#4054#4342#0" expanded="true" />
-            <element signature="e#4341#4342#0" expanded="true" />
-            <element signature="e#4437#4679#0" expanded="true" />
-            <element signature="e#4678#4679#0" expanded="true" />
-            <element signature="e#4756#4965#0" expanded="true" />
-            <element signature="e#4964#4965#0" expanded="true" />
-            <element signature="e#5066#5067#0" expanded="true" />
-            <element signature="e#5103#5104#0" expanded="true" />
+            <element signature="e#4634#4922#0" expanded="true" />
+            <element signature="e#4921#4922#0" expanded="true" />
+            <element signature="e#5017#5259#0" expanded="true" />
+            <element signature="e#5258#5259#0" expanded="true" />
+            <element signature="e#5336#5545#0" expanded="true" />
+            <element signature="e#5544#5545#0" expanded="true" />
+            <element signature="e#5646#5647#0" expanded="true" />
+            <element signature="e#5683#5684#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2962,7 +2970,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/State/DefaultTimerStateMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3333335">
+        <state vertical-scroll-proportion="-37.37037">
           <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
           <folding>
             <element signature="e#1223#1224#0" expanded="true" />
@@ -2973,8 +2981,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/Model/ConcreteTimerModelFacade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-37.0">
-          <caret line="92" column="22" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
+        <state vertical-scroll-proportion="-13.592592">
+          <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2983,20 +2991,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/annezhao/timer/android/TimerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4944238">
-          <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.6082677">
+          <caret line="110" column="55" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#967#968#0" expanded="true" />
             <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#4054#4342#0" expanded="true" />
-            <element signature="e#4341#4342#0" expanded="true" />
-            <element signature="e#4437#4679#0" expanded="true" />
-            <element signature="e#4678#4679#0" expanded="true" />
-            <element signature="e#4756#4965#0" expanded="true" />
-            <element signature="e#4964#4965#0" expanded="true" />
-            <element signature="e#5066#5067#0" expanded="true" />
-            <element signature="e#5103#5104#0" expanded="true" />
+            <element signature="e#4634#4922#0" expanded="true" />
+            <element signature="e#4921#4922#0" expanded="true" />
+            <element signature="e#5017#5259#0" expanded="true" />
+            <element signature="e#5258#5259#0" expanded="true" />
+            <element signature="e#5336#5545#0" expanded="true" />
+            <element signature="e#5544#5545#0" expanded="true" />
+            <element signature="e#5646#5647#0" expanded="true" />
+            <element signature="e#5683#5684#0" expanded="true" />
           </folding>
         </state>
       </provider>

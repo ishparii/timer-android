@@ -94,10 +94,12 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
         Log.i(TAG, "onSaveInstanceState");
         super.onSaveInstanceState(outState);
         outState.putParcelable("obj", modelFacade);
-        /*final TextView displayTime = (TextView) findViewById(R.id.displayTime);
+        final TextView displayTime = (TextView) findViewById(R.id.displayTime);
         final TextView currentState = (TextView) findViewById(R.id.CurrentState);
-        outState.putInt("timeDisplayed", Integer.parseInt(displayTime.getText().toString()));
-        outState.putString("currentState", currentState.getText().toString());*/
+        final EditText input = (EditText) findViewById(R.id.inputTime);
+        outState.putString("timeDisplayed", displayTime.getText().toString());
+        outState.putString("currentState", currentState.getText().toString());
+        outState.putString("currentInput", input.getText().toString());
     }
 
     @Override
@@ -106,6 +108,12 @@ public class TimerAdapter extends Activity implements TimerUIUpdateListener{
         super.onRestoreInstanceState(savedInstanceState);
         modelFacade=savedInstanceState.getParcelable("obj");
         modelFacade.setUIUpdateListener(this);
+        final TextView displayTime = (TextView) findViewById(R.id.displayTime);
+        final TextView currentState = (TextView) findViewById(R.id.CurrentState);
+        final EditText input = (EditText) findViewById(R.id.inputTime);
+        displayTime.setText(savedInstanceState.getString("timeDisplayed"));
+        currentState.setText(savedInstanceState.getString("currentState"));
+        input.setText(savedInstanceState.getString("currentInput"));
         //modelFacade.onStart();
     }
 
