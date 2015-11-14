@@ -7,8 +7,6 @@ import com.example.annezhao.timer.common.TimerUIListener;
  * Created by annezhao on 10/28/15.
  */
 public interface States extends TimerUIListener, OnTickListener {
-//    void onTick();          tick event, inherited
-//    void onClick();         click event, inherited
     void updateView();
     int getId();
 }

@@ -1,6 +1,6 @@
 package com.example.annezhao.timer.test.model.time;
 
-import com.example.annezhao.timer.Model.Time.DefaulTimeModel;
+import com.example.annezhao.timer.Model.Time.DefaultTimeModel;
 
 import org.junit.After;
 import org.junit.Before;
@@ -12,7 +12,7 @@ public class DefaultTimeModelTest extends AbstractTimeModelTest{
 
     @Before
     public void setUp() throws Exception{
-        setModel(new DefaulTimeModel());
+        setModel(new DefaultTimeModel());
     }
 
     @After

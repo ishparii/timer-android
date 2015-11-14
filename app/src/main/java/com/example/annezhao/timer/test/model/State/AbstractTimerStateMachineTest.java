@@ -36,7 +36,6 @@ public abstract class AbstractTimerStateMachineTest {
     }
 
     //setter for dependency injection. Usually invoked by concrete testcase subclass.
-
     protected void setModel(final TimerStateMachine model) {
         this.model = model;
         if (model == null) //if not in any state, meaning not entered into initial(stopped) state yet
@@ -50,7 +49,6 @@ public abstract class AbstractTimerStateMachineTest {
     }
 
     //verifies that we're initially in the stopped state (and told the listener about it)
-
     @Test
     public void testPreconditions() {
         assertEquals(R.string.Stopped, dependency.getState());
@@ -58,7 +56,6 @@ public abstract class AbstractTimerStateMachineTest {
 
     //verifies the following scenarios: time is 0, press start/stop 15 times,
     //expect time 15.
-
     @Test
     public void testScenarioSet() {
         assertTimeEquals(0);
@@ -69,8 +66,7 @@ public abstract class AbstractTimerStateMachineTest {
 
     //verifies the following scenario:time is 0, press start/stop 17 times, wait 2s,
     //expect time 17, wait 3s, expect time 15, wait 2s, expect 13. wait 13s, expect 0.
-    // press start/stop, expect dependency stopped. 
-
+    // press start/stop, expect dependency stopped.
     @Test
     public void testScenarioRun(){
         assertTimeEquals(0);
@@ -98,32 +94,49 @@ public abstract class AbstractTimerStateMachineTest {
         assertFalse(dependency.isStarted());
     }
 
-
-
     //checks whether the model has invoked the expected time-keeping
     //methods on the mock object
     //create shortcut for onClick, onTick and assertEquals methods
+    protected void onClickRepeat (final int n){
+        for (int i = 0; i < n; i++){
+            model.onClick();
+        }
+    }
 
-    protected void onClickRepeat (final int n){for (int i=0; i<n; i++){model.onClick();}}
+    protected void onTickRepeat (final int j){
+        for (int i = 0; i < j; i++){
+            model.onTick();
+        }
+    }
 
-    protected void onTickRepeat (final int j){for (int i=0; i<j; i++){model.onTick();}}
-
-    protected void assertTimeEquals(final int t){assertEquals(t, dependency.getTime());}
+    protected void assertTimeEquals(final int t){
+        assertEquals(t, dependency.getTime());
+    }
 }
-    //manually implemented mock object that unifieds the three dependencies of the
+    //manually implemented mock object that unifies the three dependencies of the
     //timer state machine model. The three dependencies correspond to the three interfaces that
     //this mock object implements.
-    //
+
+
+
 
  class UnifiedMockDependency implements TimeModel, ClockModel,TimerUIUpdateListener{
 
-        private int timeValue =-1, stateID =-1;
-        private int runningTime =0;
+        private int timeValue = -1, stateID = -1;
+        private int runningTime = 0;
         private boolean started = false;
 
-        public int getTime() {return timeValue;}
-        public int getState() {return stateID;}
-        public boolean isStarted() {return started;}
+        public int getTime() {
+            return timeValue;
+        }
+
+        public int getState() {
+            return stateID;
+        }
+
+        public boolean isStarted() {
+            return started;
+        }
 
         @Override
         public void updateTime(final int timeValue){
@@ -136,7 +149,7 @@ public abstract class AbstractTimerStateMachineTest {
         }
 
         @Override
-        public void playAlarmSound() {//// TODO: 11/13/15 how to test playSound
+        public void playAlarmSound() {
 
         }
 
@@ -156,8 +169,8 @@ public abstract class AbstractTimerStateMachineTest {
         }
 
         @Override
-        public void clearInput() {runningTime=0;
-
+        public void clearInput() {
+            runningTime = 0;
         }
 
         @Override
@@ -166,26 +179,39 @@ public abstract class AbstractTimerStateMachineTest {
         }
 
         @Override
-        public void start() {started = true;}
+        public void start() {
+            started = true;
+        }
 
         @Override
-        public void stop() {started = false;}
+        public void stop() {
+            started = false;
+        }
 
         @Override
-        public void resetRuntime(){runningTime = 0;}
+        public void resetRuntime(){
+            runningTime = 0;
+        }
 
         @Override
-        public int getRuntime(){return runningTime;}
+        public int getRuntime(){
+            return runningTime;
+        }
 
         @Override
-        public void setRuntime(int inputRunTime){runningTime=inputRunTime;}
+        public void setRuntime(int inputRunTime){
+            runningTime = inputRunTime;
+        }
 
         @Override
-        public void incRuntime(){runningTime++;}
+        public void incRuntime(){
+            runningTime++;
+        }
 
         @Override
-        public void decRuntime(){runningTime--;}
-
+        public void decRuntime(){
+            runningTime--;
+        }
     }
 
 

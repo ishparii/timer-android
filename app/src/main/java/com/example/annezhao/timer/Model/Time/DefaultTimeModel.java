@@ -6,7 +6,7 @@ import static com.example.annezhao.timer.common.Constants.*;
  * Created by annezhao on 10/30/15.
  */
 
-public class DefaulTimeModel implements TimeModel {
+public class DefaultTimeModel implements TimeModel {
 
     private int runningTime = 0;
 

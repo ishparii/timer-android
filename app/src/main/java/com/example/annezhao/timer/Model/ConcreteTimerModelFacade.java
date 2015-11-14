@@ -4,7 +4,7 @@ import com.example.annezhao.timer.Model.Clock.ClockModel;
 import com.example.annezhao.timer.Model.Clock.DefaultClockModel;
 import com.example.annezhao.timer.Model.State.DefaultTimerStateMachine;
 import com.example.annezhao.timer.Model.State.TimerStateMachine;
-import com.example.annezhao.timer.Model.Time.DefaulTimeModel;
+import com.example.annezhao.timer.Model.Time.DefaultTimeModel;
 import com.example.annezhao.timer.Model.Time.TimeModel;
 import com.example.annezhao.timer.common.TimerUIUpdateListener;
 
@@ -18,7 +18,7 @@ public class ConcreteTimerModelFacade implements TimerModelFacade {
     private ClockModel clockModel;
 
     public ConcreteTimerModelFacade(){
-        timeModel = new DefaulTimeModel();
+        timeModel = new DefaultTimeModel();
         clockModel = new DefaultClockModel();
         timerStateMachine = new DefaultTimerStateMachine(timeModel,clockModel);
         clockModel.setOnTickListener(timerStateMachine);
@@ -28,6 +28,7 @@ public class ConcreteTimerModelFacade implements TimerModelFacade {
     public void onStart() {
         timerStateMachine.actionInit();
     }
+
     @Override
     public void onClick() {
         timerStateMachine.onClick();

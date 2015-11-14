@@ -8,12 +8,10 @@ import com.example.annezhao.timer.R;
 public class TimingState implements States {
 
     private final TimerSMStateView smStateView;
-    //private int timeDisplayed = 0;
 
     public TimingState(final TimerSMStateView smStateView){
         this.smStateView = smStateView;
     }
-
 
     @Override
     public void onClick() {
@@ -24,7 +22,6 @@ public class TimingState implements States {
 
     @Override
     public void onTick() {
-        //timeDisplayed = smStateView.actionTime();
         smStateView.actionCountDown();
         if(smStateView.actionGetTime() == 0) {
             smStateView.toAlertingState();

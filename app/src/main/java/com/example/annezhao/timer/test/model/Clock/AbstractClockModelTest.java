@@ -16,20 +16,18 @@ import static org.junit.Assert.assertEquals;
  */
 public abstract class AbstractClockModelTest {
 
-    //setter for dependency injection.
-
+    //setter for dependency injection
     private ClockModel model;
     protected void setModel(final ClockModel model){
-        this.model= model;
+        this.model = model;
     }
 
-    //verifies that a stopped clock model does not emit any tick event.
-
+    //verifies that a stopped clock model does not emit any tick event
     @Test
     public void testStopped() throws InterruptedException{
+
         //timer and clock has different thread
         //it is a thread-safe object
-
         final AtomicInteger i = new AtomicInteger(0);
         model.setOnTickListener(new OnTickListener() {
             @Override
@@ -38,7 +36,7 @@ public abstract class AbstractClockModelTest {
         Thread.sleep(6500); //another thread
         assertEquals(0, i.get());}
 
-    //verifies that in the clockmode, if the clock is running, tick event
+    //verifies that in the clock model, if the clock is running, tick event
     //takes place very 1 second
     @Test
     public void testRunning() throws InterruptedException{

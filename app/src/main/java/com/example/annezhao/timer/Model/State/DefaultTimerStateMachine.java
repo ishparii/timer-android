@@ -102,7 +102,6 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
 
     @Override public void actionStop() {
         clockModel.stop();
-        /*timeModel.resetRuntime();*/
     }
 
     @Override public void actionIncrease(){
@@ -112,7 +111,7 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
 
     @Override
     public void actionCountDown(){
-        timeModel.decRuntime();  //countdown
+        timeModel.decRuntime();
         actionUpdateView();
     }
 

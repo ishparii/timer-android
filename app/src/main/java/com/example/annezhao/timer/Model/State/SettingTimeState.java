@@ -14,23 +14,25 @@ public class SettingTimeState implements States {
                 this.smStateView = smStateView;
         }
 
-
     @Override
     public void onClick() {
         count = 0;
+
         if (smStateView.actionGetTime() < 99) {
             smStateView.actionIncrease();
         }
     }
 
     @Override
-    public void onTick() { //from the clock model, it's the background tick
+    public void onTick() {
         count ++;
+
         if(count==3){
             smStateView.actionAlert();
             smStateView.toTimingState();
             count = 0;
         }
+
         if(smStateView.actionGetTime() == 99) {
             smStateView.actionAlert();
             smStateView.toTimingState();

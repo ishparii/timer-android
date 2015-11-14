@@ -25,10 +25,8 @@ public interface TimerSMStateView {
     int actionGetInputTime();
     void actionSetTime();
 
-
     //state-dependent UI updates
     void updateUIRuntime();
     void clearInput();
-
 }
 

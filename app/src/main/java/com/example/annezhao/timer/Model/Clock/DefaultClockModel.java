@@ -21,7 +21,6 @@ public class DefaultClockModel implements ClockModel {
                 listener.onTick();
             }
         },1000,1000);
-
     }
 
     @Override

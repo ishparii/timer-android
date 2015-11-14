@@ -40,7 +40,7 @@ public abstract class AbstractTimerActivityTest {
 
     /**
      * Verifies the following scenario: time is 0, click button 10 times, expect display 10.
-     * Wait 3 seconds, expect display 10. Wait 4 more seconds, expect display 6.
+     * Wait 3 seconds, expect display 10. Wait 4 more seconds, expect display 7.
      *
      * @throws Throwable
      */
@@ -73,8 +73,6 @@ public abstract class AbstractTimerActivityTest {
         });
     }
 
-
-
     protected abstract TimerAdapter getActivity();
 
     protected int textViewToInt(final TextView textView){
@@ -93,6 +91,5 @@ public abstract class AbstractTimerActivityTest {
     }
 
     protected void runUiThreadTasks(){
-
     }
 }

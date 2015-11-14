@@ -24,7 +24,6 @@ public class AlertingState implements States {
     @Override
     public void onTick() {
         smStateView.actionAlert();
-        //throw new UnsupportedOperationException("OnTick"); //infinity alarm
     }
 
     @Override

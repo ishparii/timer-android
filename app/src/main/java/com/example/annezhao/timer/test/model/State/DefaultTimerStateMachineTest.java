@@ -10,7 +10,6 @@ import org.junit.Before;
  */
 public class DefaultTimerStateMachineTest extends AbstractTimerStateMachineTest
 {
-
     @Before
     public void setUp() throws Exception{
         super.setUp();
