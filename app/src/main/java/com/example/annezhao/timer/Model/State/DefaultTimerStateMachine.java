@@ -103,7 +103,6 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
         clockModel.start();
     }
 
-
     @Override public void actionStop() {
         clockModel.stop();
     }
@@ -135,9 +134,14 @@ public class DefaultTimerStateMachine implements TimerStateMachine{
     }
 
     @Override
-    public boolean inputEntered() { return uiUpdateListener.inputEntered(); }
+    public boolean inputEntered() {
+        return uiUpdateListener.inputEntered();
+    }
 
-    @Override public boolean inputValid() { return uiUpdateListener.inputValid(); }
+    @Override
+    public boolean inputValid() {
+        return uiUpdateListener.inputValid();
+    }
 
     @Override
     public int actionGetInputTime() {
